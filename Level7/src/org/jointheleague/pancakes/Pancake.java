@@ -1,18 +1,31 @@
 package org.jointheleague.pancakes;
 
-public abstract class Pancake
+public abstract class Pancake implements Ingredients, Price
 {
-	public abstract double getPrice();
+	private static int numberOfPancakes = 0;
+	private int pancakeID;
 
-	public abstract int getPortionsOfFlour();
-
-	public abstract int getEggs();
-
-	public abstract int getBacon();
-
-	public String getIngredients()
+	public Pancake()
 	{
-		return (getPortionsOfFlour() + " portions of flour, " + getEggs() + " eggs, " + getBacon() + " bacon strips");
+		numberOfPancakes += 1;
+		pancakeID = numberOfPancakes;
 	}
 
+	@Override
+	public int getPortionsOfFlour()
+	{
+		return 5;
+	}
+
+	@Override
+	public int getEggs()
+	{
+		return pancakeID % 2;
+	}
+
+	@Override
+	public int getBaconStrips()
+	{
+		return 0;
+	}
 }
