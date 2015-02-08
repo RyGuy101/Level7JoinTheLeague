@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Restaurant
 {
-	static Pantry pantry = new Pantry(10, 12, 5);
+	static Pantry pantry = new Pantry(20, 12, 20);
 
 	public static void main(String[] args)
 	{
@@ -19,5 +19,5 @@ public class Restaurant
 		System.out.println("It is " + vegetarianality + "vegetarian.");
 		System.out.println("The ingredients needed are " + order.getIngredients() + ".");
 		System.out.println("The pantry currently has " + pantry.getIngredients() + ".");
-	}
+	} 
 }
